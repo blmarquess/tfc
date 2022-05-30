@@ -1,3 +1,11 @@
-# FROM node:16-alpine
+FROM node:16-alpine AS tfc_frontend
 
-#  ...
+WORKDIR /app
+
+COPY . .
+
+RUN npm install --silent
+
+EXPOSE 3000
+
+ENTRYPOINT [ "npm", "start" ]
