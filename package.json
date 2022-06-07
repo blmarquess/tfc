@@ -13,7 +13,7 @@
     "compose:down": "(cd app && docker-compose down --remove-orphans)",
     "compose:up": "(cd app && docker-compose up -d --build)",
     "compose:up:dev": "(cd app && docker-compose -f docker-compose.dev.yml up -d --build)",
-    "compose:down:dev": "(cd app && docker-compose -f docker-compose.dev.yml down --remove-orphans)"  
+    "compose:down:dev": "(cd app && docker-compose -f docker-compose.dev.yml down --remove-orphans)"
   },
   "author": "Trybe",
   "devDependencies": {
@@ -21,6 +21,7 @@
     "@testing-library/react": "11.2.7",
     "@testing-library/user-event": "12.8.3",
     "axios": "^0.26.0",
+    "cz-conventional-changelog": "^3.3.0",
     "dotenv": "10.0.0",
     "jest": "26.6.0",
     "mocha": "9.2.0",
@@ -35,5 +36,10 @@
     "jsonwebtoken": "8.5.1",
     "puppeteer": "13.2.0",
     "uuid": "8.3.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

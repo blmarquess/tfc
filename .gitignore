@@ -11,3 +11,5 @@ back.eval
 .DS_Store
 app/backend/.env.example
 .gitignore
+app/backend/.env.example
+app/backend/.env.example
