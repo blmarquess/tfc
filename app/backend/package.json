@@ -10,9 +10,9 @@
     "test:coverage:json": "nyc --reporter=json-summary npm run test",
     "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "prestart": "npm run build && npm run db:reset",
-    "start": "node .",
+    "start": "node -r tsconfig-paths/register .",
     "predev": "npm run build && npm run db:reset",
-    "dev": "nodemon --watch \"./src/**\" ./src/server.ts",
+    "dev": "nodemon -r tsconfig-paths/register --watch \"./src/**\" ./src/server.ts",
     "postinstall": "if [ ! -z 'cat ./packages.npm' ]; then npm i --ignore-scripts $(cat ./packages.npm); fi",
     "lint": "eslint ./src --ext .ts"
   },
@@ -49,6 +49,7 @@
     "sinon": "13.0.1",
     "ts-node": "10.7.0",
     "ts-node-dev": "1.1.8",
+    "tsconfig-paths": "^4.0.0",
     "typescript": "4.4.4"
   },
   "dependencies": {

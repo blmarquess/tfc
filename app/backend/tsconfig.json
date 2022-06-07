@@ -1,21 +1,26 @@
 {
   "compilerOptions": {
-    "target": "es2019",
+    "target": "es2020",
     "module": "commonjs",
     "sourceMap": true,                     
     "outDir": "./build",
     "rootDir": "./src",
     "strict": true,
     "moduleResolution": "node",
-    "baseUrl": ".", 
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "strictPropertyInitialization": false,
     "skipLibCheck": true,
+    "baseUrl": ".",
     "paths": {
-      "*": ["node_modules/*"]
+      "*": ["node_modules/*"],
+      "@controllers/*":["./src/controllers/*"],
+      "@models/*": ["./src/database/models/*"],
+      "@config/*": ["./src/config/*"],
+      "@routers/*": ["./src/routers/*"],
+      "@useCase/*": ["./src/useCases"]
     }
   },
   "include": ["src/**/*"],
