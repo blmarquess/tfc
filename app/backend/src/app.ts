@@ -1,4 +1,5 @@
 import * as express from 'express';
+import router from '@routers/routers';
 
 class App {
   public app: express.Express;
@@ -22,7 +23,7 @@ class App {
   }
 
   private routes(): void {
-
+    this.app.use(router);
   }
 
   public start(PORT: string | number):void {
@@ -32,5 +33,4 @@ class App {
 
 export { App };
 
-// A execução dos testes de cobertura depende dessa exportação
 export const { app } = new App();

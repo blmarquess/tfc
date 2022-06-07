@@ -2,12 +2,10 @@ FROM node:16-alpine AS tfc_backend
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY . .
 
 RUN npm install --silent
 
-COPY . .
-
 EXPOSE 3001
 
-ENTRYPOINT ["npm", "start"]
+CMD ["npm", "start"]

@@ -8,3 +8,6 @@ front.eval
 back.eval
 .vscode
 *.env
+.DS_Store
+app/backend/.env.example
+.gitignore
