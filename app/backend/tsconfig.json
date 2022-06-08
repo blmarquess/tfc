@@ -17,6 +17,7 @@
     "paths": {
       "*": ["node_modules/*"],
       "@controllers/*":["./src/controllers/*"],
+      "@db/*": ["./src/database/*"],
       "@models/*": ["./src/database/models/*"],
       "@config/*": ["./src/config/*"],
       "@routers/*": ["./src/routers/*"],
