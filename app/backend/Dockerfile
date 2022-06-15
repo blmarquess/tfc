@@ -6,6 +6,8 @@ COPY . .
 
 RUN npm install --silent
 
+RUN npm run build --silent
+
 EXPOSE 3001
 
 CMD ["npm", "start"]

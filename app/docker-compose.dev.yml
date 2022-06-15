@@ -2,8 +2,15 @@ version: '3.9'
 services:
   frontend:
     build: ./frontend
+    working_dir: /home/app/frontend
+    container_name: frontend-tfc
+    command: npm start
+    restart: always
     platform: linux/x86_64
-    # ...
+    volumes:
+      - ./frontend:/home/app/frontend
+    ports:
+      - "3000:3000"
     depends_on:
       backend:
         condition: service_healthy
@@ -13,12 +20,15 @@ services:
       retries: 5
   backend:
     build: ./backend
-    # ...
+    container_name: backend-tfc
+    working_dir: /home/app/backend
     platform: linux/x86_64
     restart: 'always'
     command: npm run dev
     volumes:
-      - './backend/src:/app/src'
+      - './backend:/home/app/backend'
+    ports:
+      - "3001:3001"
     depends_on:
       db:
         condition: service_healthy
