@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Matches', {
+    await queryInterface.createTable('matches', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -9,43 +9,33 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       homeTeam: {
-        type: Sequelize.INTEGER,
         allowNull: false,
-        references: {
-          model: 'Teams',
-          key: 'id',
-        },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE',
+        type: Sequelize.INTEGER,
+        field: 'home_team',
       },
       homeTeamGoals: {
-        type: Sequelize.INTEGER,
         allowNull: false,
+        type: Sequelize.INTEGER,
+        field: 'home_team_goals',
       },
       awayTeam: {
-        type: Sequelize.INTEGER,
         allowNull: false,
-        references: {
-          model: 'Teams',
-          key: 'id',
-        },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE',
+        type: Sequelize.INTEGER,
+        field: 'away_team'
       },
       awayTeamGoals: {
-        type: Sequelize.INTEGER
-      },
-      createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.INTEGER,
+        field: 'away_team_goals',
       },
-      updatedAt: {
+      inProgress: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.INTEGER,
+        field: 'in_progress',
       }
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Matches');
+    await queryInterface.dropTable('matches');
   }
 };
