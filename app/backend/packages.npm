@@ -1,0 +1,9 @@
+npm install -g typescript
+npm install -g ts-node
+npm install -g ts-node-dev
+npm install joi
+npm install -g npm@8.12.2
+npm install tsconfig-paths
+npm install tsc-alias
+npm install -save-dev tsconfig-paths/register
+npm install module-alias

@@ -8,14 +8,6 @@ COPY . .
 
 RUN npm config set unsafe-perm true
 
-RUN npm install -g typescript
-
-RUN npm install -g ts-node
-
-RUN npm install -g ts-node-dev
-
-RUN npm install -g npm@8.12.2
-
 USER node
 
 RUN npm install
