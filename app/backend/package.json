@@ -10,7 +10,7 @@
     "test:coverage:json": "nyc --reporter=json-summary npm run test",
     "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "prestart": "npm run build && npm run db:reset",
-    "start": "node -r tsconfig-paths/register -r ts-node ./src/index/ts",
+    "start": "node --require ts-node/register --require tsconfig-paths/register ./src/server.ts",
     "predev": "npm run build && npm run db:reset",
     "dev": "nodemon -r tsconfig-paths/register --watch \"./src/**\" ./src/server.ts",
     "postinstall": "if [ ! -z 'cat ./packages.npm' ]; then npm i --ignore-scripts $(cat ./packages.npm); fi",

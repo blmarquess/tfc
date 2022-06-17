@@ -4,7 +4,7 @@ services:
     build: ./frontend
     working_dir: /home/app/frontend
     container_name: frontend-tfc
-    command: npm start
+    command: npm run start
     restart: always
     platform: linux/x86_64
     volumes:
@@ -24,7 +24,7 @@ services:
     working_dir: /home/app/backend
     platform: linux/x86_64
     restart: 'always'
-    command: npm run dev
+    command: npm run start
     volumes:
       - './backend:/home/app/backend'
     ports:
