@@ -19,6 +19,6 @@ export default async function loginValidationParams(requestBody:requestBody) {
   const { email, password } = requestBody;
   const { error } = paramsSchema.validate({ email, password });
   if (error) {
-    throw new HttpRequestError('Incorrect email or password', StatusCodes.BAD_REQUEST);
+    throw new HttpRequestError('Incorrect email or password', StatusCodes.UNAUTHORIZED);
   }
 }
