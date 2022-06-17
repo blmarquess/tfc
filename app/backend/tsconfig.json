@@ -21,8 +21,10 @@
       "@models/*": ["./src/database/models/*"],
       "@config/*": ["./src/config/*"],
       "@routers/*": ["./src/routers/*"],
+      "@errors/*": ["./src/errors/*"],
       "@entities/*": ["./src/entities/*"],
       "@adapters/*": ["./src/adapters/*"],
+      "@factories/*": ["./src/factories/*"],
       "@useCases/*": ["./src/useCases/*"]
     }
   },
