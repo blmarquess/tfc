@@ -3,7 +3,7 @@ services:
   frontend:
     build: ./frontend
     working_dir: /home/app/frontend
-    container_name: frontend-tfc
+    container_name: app_frontend
     command: npm start
     restart: always
     platform: linux/x86_64
@@ -20,7 +20,7 @@ services:
       retries: 5
   backend:
     build: ./backend
-    container_name: backend-tfc
+    container_name: app_backend
     working_dir: /home/app/backend
     platform: linux/x86_64
     restart: 'always'

@@ -1,4 +1,4 @@
-FROM node:16-alpine AS tfc_frontend
+FROM node:16-alpine AS app_frontend
 
 WORKDIR /home/app/frontend
 
