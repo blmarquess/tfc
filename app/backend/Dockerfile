@@ -4,9 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm install --silent
-
-RUN npm run build --silent
+RUN npm install
 
 EXPOSE 3001
 

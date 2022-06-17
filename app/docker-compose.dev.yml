@@ -10,7 +10,7 @@ services:
     volumes:
       - ./frontend:/home/app/frontend
     ports:
-      - "3000:3000"
+      - 3000:3000
     depends_on:
       backend:
         condition: service_healthy
@@ -28,7 +28,7 @@ services:
     volumes:
       - './backend:/home/app/backend'
     ports:
-      - "3001:3001"
+      - 3001:3001
     depends_on:
       db:
         condition: service_healthy

@@ -21,7 +21,9 @@
       "@models/*": ["./src/database/models/*"],
       "@config/*": ["./src/config/*"],
       "@routers/*": ["./src/routers/*"],
-      "@useCase/*": ["./src/useCases"]
+      "@entities/*": ["./src/entities/*"],
+      "@adapters/*": ["./src/adapters/*"],
+      "@useCases/*": ["./src/useCases/*"]
     }
   },
   "include": ["src/**/*"],

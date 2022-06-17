@@ -13,8 +13,7 @@ app/backend/.env.example
 .gitignore
 app/backend/.env.example
 app/backend/.env.example
-thunder-tests/thunderActivity.json
-thunder-tests/thunderclient.json
-thunder-tests/thunderCollection.json
-thunder-tests/thunderEnvironment.json
+thunder-tests/*
+app/backend/.env.example
+app/backend/thunder-tests/*
 app/backend/.env.example
