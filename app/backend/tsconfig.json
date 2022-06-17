@@ -25,6 +25,7 @@
       "@entities/*": ["./src/entities/*"],
       "@adapters/*": ["./src/adapters/*"],
       "@factories/*": ["./src/factories/*"],
+      "@repositories/*": ["./src/repositories/*"],
       "@useCases/*": ["./src/useCases/*"],
       "@utils/*": ["./src/utils/*"]
     }

@@ -1,18 +1,14 @@
 import HttpRequestError from '@errors/HttpRequestError';
 import StatusCodes from '@utils/statusCodes';
 import * as Joi from 'joi';
+import { LoginDTO } from '../LoginDTO';
 
 const paramsSchema = Joi.object({
   email: Joi.string().email().required(),
   password: Joi.string().min(6).required(),
 });
 
-type requestBody = {
-  email: string;
-  password: string;
-};
-
-export default async function loginValidationParams(requestBody:requestBody) {
+export default async function loginValidationParams(requestBody:LoginDTO) {
   if (!requestBody.email || !requestBody.password) {
     throw new HttpRequestError('All fields must be filled', StatusCodes.BAD_REQUEST);
   }
