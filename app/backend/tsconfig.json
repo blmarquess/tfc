@@ -16,16 +16,16 @@
     "baseUrl": ".",
     "paths": {
       "*": ["node_modules/*"],
-      "@controllers/*":["./src/controllers/*"],
+      "@/*":["./src/*"],
       "@db/*": ["./src/database/*"],
       "@models/*": ["./src/database/models/*"],
       "@config/*": ["./src/config/*"],
-      "@routers/*": ["./src/routers/*"],
+      "@routers/*": ["src/presentation/routers/*"],
       "@errors/*": ["./src/errors/*"],
       "@entities/*": ["./src/entities/*"],
-      "@adapters/*": ["./src/adapters/*"],
-      "@factories/*": ["./src/factories/*"],
-      "@repositories/*": ["./src/repositories/*"],
+      "@adapters/*": ["src/presentation/adapters/*"],
+      "@factories/*": ["src/presentation/factories/*"],
+      "@repositories/*": ["src/useCases/repositories/*"],
       "@useCases/*": ["./src/useCases/*"],
       "@utils/*": ["./src/utils/*"]
     }

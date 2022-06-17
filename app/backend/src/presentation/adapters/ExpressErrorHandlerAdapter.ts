@@ -13,7 +13,7 @@ function ExpressErrorHandlerAdapter(
   res: Response,
   next: NextFunction,
 ) {
-  if (error && error.statusCode) {
+  if (error?.statusCode) {
     return res.status(error.statusCode).json({
       status: error.statusCode,
       type: error.type,

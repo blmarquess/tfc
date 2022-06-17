@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
-import userRepository from '@repositories/implementations/UserRepository';
-import AuthServiceSection from '@useCases/Auth/AuthServiceSection';
+import loginUseCase from './LoginUseCase';
 import loginValidationParams from './validation/loginValidationParams';
 
 export default class LoginController {
@@ -13,17 +12,8 @@ export default class LoginController {
     const { body } = this.HttpRequest;
     await loginValidationParams(body);
 
-    const user = await userRepository.validationCredence(body);
+    const userAuthSection = await loginUseCase.validationCredence(body);
 
-    const token = await AuthServiceSection.generateAuthToken(user);
-    return this.response.status(200).json({
-      user: {
-        id: user.id,
-        username: user.username,
-        role: user.role,
-        email: user.email,
-      },
-      token,
-    });
+    return this.response.status(200).json(userAuthSection);
   }
 }
