@@ -1,5 +1,6 @@
 import * as express from 'express';
 import router from '@routers/routers';
+import ExpressErrorHandlerAdapter from '@adapters/ExpressErrorHandlerAdapter';
 
 class App {
   public app: express.Express;
@@ -8,6 +9,7 @@ class App {
     this.app = express();
     this.config();
     this.routes();
+    this.errorMiddleware();
   }
 
   private config():void {
@@ -24,6 +26,10 @@ class App {
 
   private routes(): void {
     this.app.use(router);
+  }
+
+  private errorMiddleware(): void {
+    this.app.use(ExpressErrorHandlerAdapter);
   }
 
   public start(PORT: string | number):void {
