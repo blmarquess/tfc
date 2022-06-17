@@ -4,7 +4,7 @@ services:
     build: ./frontend
     working_dir: /home/app/frontend
     container_name: app_frontend
-    command: npm start
+    command: npm run start
     restart: always
     platform: linux/x86_64
     volumes:
