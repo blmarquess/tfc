@@ -20,7 +20,7 @@ export class UserRepository implements IUserRepository {
       throw new CredentialError('Incorrect email or password', StatusCodes.UNAUTHORIZED);
     }
 
-    const isValidePassword = await bcryptjs.compare(password, user.password);
+    const isValidePassword = bcryptjs.compare(password, user.password);
 
     if (!isValidePassword) {
       throw new CredentialError('Incorrect email or password', StatusCodes.UNAUTHORIZED);

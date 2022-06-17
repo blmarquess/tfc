@@ -1,6 +1,6 @@
 FROM node:16-alpine AS tfc_backend
 
-WORKDIR /app
+WORKDIR /home/app/backend
 
 COPY . .
 
