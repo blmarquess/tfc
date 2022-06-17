@@ -1,7 +1,8 @@
 import { Model, DataTypes } from 'sequelize';
+import { TeamEntity } from '@entities/TeamEntity';
 import db from '.';
 
-class Team extends Model { }
+class Team extends Model<TeamEntity> { }
 
 Team.init(
   {
