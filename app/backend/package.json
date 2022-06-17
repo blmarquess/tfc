@@ -63,6 +63,7 @@
     "jsonwebtoken": "8.5.1",
     "mysql2": "2.3.3",
     "sequelize": "6.9.0",
+    "tsc-alias": "^1.6.10",
     "tscpaths": "^0.0.9"
   },
   "config": {
