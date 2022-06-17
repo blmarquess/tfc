@@ -25,7 +25,8 @@
       "@entities/*": ["./src/entities/*"],
       "@adapters/*": ["./src/adapters/*"],
       "@factories/*": ["./src/factories/*"],
-      "@useCases/*": ["./src/useCases/*"]
+      "@useCases/*": ["./src/useCases/*"],
+      "@utils/*": ["./src/utils/*"]
     }
   },
   "include": ["src/**/*"],

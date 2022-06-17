@@ -17,3 +17,4 @@ thunder-tests/*
 app/backend/.env.example
 app/backend/thunder-tests/*
 app/backend/.env.example
+app/backend/.env.example
