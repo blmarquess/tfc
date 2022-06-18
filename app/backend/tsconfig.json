@@ -19,12 +19,12 @@
       "@db/*": ["./src/database/*"],
       "@models/*": ["./src/database/models/*"],
       "@config/*": ["./src/config/*"],
-      "@routers/*": ["src/presentation/routers/*"],
-      "@presentation/*": ["src/presentation/*"],
+      "@routers/*": ["./src/presentation/routers/*"],
+      "@presentation/*": ["./src/presentation/*"],
       "@entities/*": ["./src/entities/*"],
-      "@adapters/*": ["src/presentation/adapters/*"],
-      "@factories/*": ["src/presentation/factories/*"],
-      "@repositories/*": ["src/useCases/repositories/*"],
+      "@adapters/*": ["./src/presentation/adapters/*"],
+      "@factories/*": ["./src/presentation/factories/*"],
+      "@repositories/*": ["./src/useCases/repositories/*"],
       "@useCases/*": ["./src/useCases/*"],
       "@utils/*": ["./src/utils/*"]
     }
