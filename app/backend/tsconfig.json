@@ -16,7 +16,6 @@
     "baseUrl": ".",
     "paths": {
       "*": ["node_modules/*"],
-      "@/*":["./src/*"],
       "@db/*": ["./src/database/*"],
       "@models/*": ["./src/database/models/*"],
       "@config/*": ["./src/config/*"],
