@@ -1,6 +1,6 @@
-import HttpRequestError from '@presentation/errors/HttpRequestError';
-import StatusCodes from '@utils/statusCodes';
 import * as Joi from 'joi';
+import HttpRequestError from '../../errors/HttpRequestError';
+import StatusCodes from '../../../utils/statusCodes';
 import { LoginDTO } from '../../../useCases/login/LoginDTO';
 
 const paramsSchema = Joi.object({

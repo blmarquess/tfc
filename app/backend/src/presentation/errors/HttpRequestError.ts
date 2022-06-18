@@ -1,4 +1,4 @@
-import StatusCodes from '@utils/statusCodes';
+import StatusCodes from '../../utils/statusCodes';
 
 export default class HttpRequestError extends Error {
   constructor(public message: string, public statusCode?: number) {

@@ -1,5 +1,5 @@
-import User from '@db/models/User';
-import { UserEntity } from '@entities/UserEntity';
+import User from '../../../database/models/User';
+import { UserEntity } from '../../../entities/UserEntity';
 import { IGetUserByEmailRepository } from '../IGetUserByEmailRepository';
 
 export class GetUserByEmailRepository implements IGetUserByEmailRepository {

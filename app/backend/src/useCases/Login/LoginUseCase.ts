@@ -1,8 +1,8 @@
-import CredentialError from '@useCases/login/errors/CredentialError';
-import StatusCodes from '@utils/statusCodes';
 import * as bcryptjs from 'bcryptjs';
-import AuthServiceSection from '@useCases/auth/AuthServiceSection';
-import getUserByEmailRepository from '@repositories/implementations/GetUserByEmailRepository';
+import { AuthServiceSection } from '../auth/AuthServiceSection';
+import StatusCodes from '../../utils/statusCodes';
+import getUserByEmailRepository from '../repositories/implementations/GetUserByEmailRepository';
+import CredentialError from './errors/CredentialError';
 
 export class LoginUseCase {
   private getUserByEmail;

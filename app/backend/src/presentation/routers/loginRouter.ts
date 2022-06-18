@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import RouterAdapter from '@adapters/ExpressRouterAdapter';
-import LoginFactory from '@factories/LoginFactory';
+import RouterAdapter from '../adapters/ExpressRouterAdapter';
+import LoginFactory from '../factories/LoginFactory';
 
 const LoginRouter = Router();
 

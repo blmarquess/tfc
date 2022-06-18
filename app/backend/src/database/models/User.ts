@@ -1,5 +1,5 @@
-import { UserEntity } from '@entities/UserEntity';
 import { DataTypes, Model } from 'sequelize';
+import { UserEntity } from '../../entities/UserEntity';
 import db from '.';
 
 class User extends Model <UserEntity> {}

@@ -1,5 +1,5 @@
-import { MatchEntity } from '@entities/MatchEntity';
 import { DataTypes, Model } from 'sequelize';
+import { MatchEntity } from '../../entities/MatchEntity';
 import db from '.';
 
 class Match extends Model<MatchEntity> {}

@@ -20,7 +20,7 @@ export const generateAuthToken = (payload: userData): string =>
 
 export const verifyAuthToken = (token: string) => jwt.verify(token, SECRET);
 
-export default class AuthServiceSection {
+class AuthServiceSection {
   public static async generateAuthToken(User:UserEntity) {
     return generateAuthToken({
       id: User.id,
@@ -33,3 +33,5 @@ export default class AuthServiceSection {
     return verifyAuthToken(token);
   }
 }
+
+export { AuthServiceSection };
