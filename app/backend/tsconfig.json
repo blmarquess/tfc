@@ -20,7 +20,7 @@
       "@models/*": ["./src/database/models/*"],
       "@config/*": ["./src/config/*"],
       "@routers/*": ["src/presentation/routers/*"],
-      "@errors/*": ["./src/errors/*"],
+      "@presentation/*": ["src/presentation/*"],
       "@entities/*": ["./src/entities/*"],
       "@adapters/*": ["src/presentation/adapters/*"],
       "@factories/*": ["src/presentation/factories/*"],

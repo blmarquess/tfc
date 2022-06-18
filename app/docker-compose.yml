@@ -3,9 +3,6 @@ services:
   frontend:
     build: ./frontend
     container_name: app_frontend
-    command: npm run start
-    restart: always
-
     ports:
       - 3000:3000
     depends_on:
@@ -18,10 +15,6 @@ services:
   backend:
     build: ./backend
     container_name: app_backend
-
-    restart: 'always'
-    command: npm run start
-
     ports:
       - 3001:3001
     depends_on:
