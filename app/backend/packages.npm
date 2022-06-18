@@ -1,0 +1,5 @@
+joi
+ts-node
+tsc-alias
+tscpaths
+tsconfig-paths
