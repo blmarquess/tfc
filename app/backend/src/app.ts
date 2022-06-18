@@ -1,6 +1,6 @@
 import * as express from 'express';
-import router from '@routers/routers';
-import ExpressErrorHandlerAdapter from '@adapters/ExpressErrorHandlerAdapter';
+import router from './presentation/routers/routers';
+import ExpressErrorHandlerAdapter from './presentation/adapters/ExpressErrorHandlerAdapter';
 
 class App {
   public app: express.Express;

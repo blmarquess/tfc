@@ -1,6 +1,6 @@
 import * as jwt from 'jsonwebtoken';
 import * as fs from 'fs';
-import { UserEntity } from '@entities/UserEntity';
+import { UserEntity } from '../../entities/UserEntity';
 
 const SECRET = fs.readFileSync('jwt.evaluation.key', 'utf-8');
 
