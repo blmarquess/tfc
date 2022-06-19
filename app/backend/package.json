@@ -5,7 +5,7 @@
   "main": "./build/server",
   "scripts": {
     "build": "/bin/sh tsc_eval.sh",
-    "test": "mocha -r ts-node/register ./src/tests/*$NAME*.{test,spec}.ts -t 10000 --exit --watch",
+    "test": "mocha -r ts-node/register ./src/tests/*$NAME*.{test,spec}.ts -t 10000 --exit",
     "test:coverage": "nyc npm run test",
     "test:coverage:json": "nyc --reporter=json-summary npm run test",
     "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",

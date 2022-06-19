@@ -63,21 +63,25 @@ describe('Login Failure cases', () => {
     expect(chaiHttpResponse.body.message).to.be.equal(messagesError.withoutemail.msg);
     expect(chaiHttpResponse.status).to.be.equal(messagesError.withoutemail.status);
   });
+
   it('Esperasse que ao tentar efetuar o login sem senha retorna a mensagem de erro e status correto', async () => {
     chaiHttpResponse = await chai.request(app).post('/login').send(incorrectUserRequest.withoutpassword);
     expect(chaiHttpResponse.body.message).to.be.equal(messagesError.withoutpassword.msg);
     expect(chaiHttpResponse.status).to.be.equal(messagesError.withoutpassword.status);
   });
+
   it('Esperasse que retorne os statos e mensagens corretas ao tentar efetuar login com informações erradas', async () => {
     chaiHttpResponse = await chai.request(app).post('/login').send(incorrectUserRequest.allincorrect);
     expect(chaiHttpResponse.body.message).to.be.equal(messagesError.allincorrect.msg);
     expect(chaiHttpResponse.status).to.be.equal(messagesError.allincorrect.status);
   });
+
   it('Esperasse que retorne os statos e mensagens corretas ao tentar efetuar login com email errado', async () => {
     chaiHttpResponse = await chai.request(app).post('/login').send(incorrectUserRequest.invalidemail);
     expect(chaiHttpResponse.body.message).to.be.equal(messagesError.invalidemail.msg);
     expect(chaiHttpResponse.status).to.be.equal(messagesError.invalidemail.status);
   });
+
   it('Esperasse que retorne os statos e mensagens corretas ao tentar efetuar login com senha errada', async () => {
     chaiHttpResponse = await chai.request(app).post('/login').send(incorrectUserRequest.invalidpassword);
     expect(chaiHttpResponse.body.message).to.be.equal(messagesError.invalidpassword.msg);
