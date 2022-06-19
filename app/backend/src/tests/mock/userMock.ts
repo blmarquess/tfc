@@ -36,3 +36,12 @@ export const incorrectUserRequest = {
 };
 
 export const incorrectUserResponse = null
+
+export const messagesError = {
+  allincorrect: { msg: "Incorrect email or password", status: 401},
+  withoutemail: { msg: "All fields must be filled", status: 400 },
+  withoutpassword: { msg: "All fields must be filled", status: 400 },
+  invalidemail: { msg: "Incorrect email or password", status: 401},
+  invalidpassword: { msg: "Incorrect email or password", status: 401},
+  unregisteredemail: { msg: "Incorrect email or password", status: 401},
+}
