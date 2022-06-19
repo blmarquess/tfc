@@ -1,11 +1,13 @@
-FROM node:16-alpine AS backend_app
+FROM node:16-alpine
 
-WORKDIR /app
+WORKDIR /app/backend
+
+COPY package.json .
+
+COPY package-lock.json .
+
+RUN [ "npm", "install"]
 
 COPY . .
 
-RUN npm install
-
-EXPOSE 3001
-
-CMD [ "npm", "start"]
+CMD [ "npm", "start" ]
