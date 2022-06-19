@@ -2,13 +2,13 @@ version: '3.9'
 services:
   frontend:
     build: ./frontend
-    working_dir: /home/app/frontend
+    working_dir: /app
     container_name: app_frontend
     command: npm run start
     restart: always
     platform: linux/x86_64
     volumes:
-      - ./frontend:/home/app/frontend
+      - ./frontend:/app
     ports:
       - 3000:3000
     depends_on:
@@ -21,12 +21,12 @@ services:
   backend:
     build: ./backend
     container_name: app_backend
-    working_dir: /home/app/backend
+    working_dir: /app
     platform: linux/x86_64
     restart: 'always'
     command: npm run start
     volumes:
-      - './backend:/home/app/backend'
+      - './backend:/app'
     ports:
       - 3001:3001
     depends_on:
