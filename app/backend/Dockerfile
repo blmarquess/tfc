@@ -1,13 +1,13 @@
 FROM node:16-alpine
 
-WORKDIR /app/backend
+WORKDIR /app
 
-COPY package.json .
+COPY package*.json ./
 
-COPY package-lock.json .
-
-RUN [ "npm", "install"]
+RUN npm install
 
 COPY . .
 
-CMD [ "npm", "start" ]
+EXPOSE 3001
+
+CMD ["npm", "start"]

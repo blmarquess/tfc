@@ -1,9 +1,10 @@
 version: '3.9'
 services:
   frontend:
-    build: ./frontend
+    build: ./frontend    
+    platform: linux/x86_64 
     container_name: app_frontend
-    ports:
+    ports: 
       - 3000:3000
     depends_on:
       backend:
@@ -14,6 +15,8 @@ services:
       retries: 5
   backend:
     build: ./backend
+    platform: linux/x86_64    
+    restart: 'always'
     container_name: app_backend
     ports:
       - 3001:3001
@@ -45,4 +48,4 @@ services:
       timeout: 10s
       retries: 5
     cap_add:
-      - SYS_NICE
+      - SYS_NICE 
