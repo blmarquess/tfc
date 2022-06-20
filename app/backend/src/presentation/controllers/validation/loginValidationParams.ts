@@ -1,7 +1,7 @@
 import * as Joi from 'joi';
 import HttpRequestError from '../../errors/HttpRequestError';
 import StatusCodes from '../../../utils/statusCodes';
-import { LoginDTO } from '../../../useCases/login/LoginDTO';
+import { LoginDTO } from '../../../useCases/loginUseCase/LoginDTO';
 
 const paramsSchema = Joi.object({
   email: Joi.string().email().required(),

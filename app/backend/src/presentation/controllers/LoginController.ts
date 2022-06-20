@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import loginUseCase from '../../useCases/login/LoginUseCase';
+import loginUseCase from '../../useCases/loginUseCase/LoginUseCase';
 import loginValidationParams from './validation/loginValidationParams';
 
 export default class LoginController {

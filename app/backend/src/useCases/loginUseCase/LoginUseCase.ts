@@ -1,5 +1,5 @@
 import * as bcryptjs from 'bcryptjs';
-import { AuthServiceSection } from '../auth/AuthServiceSection';
+import { AuthServiceSection } from '../authUseCase/AuthServiceSection';
 import StatusCodes from '../../utils/statusCodes';
 import getUserByEmailRepository from '../repositories/implementations/GetUserByEmailRepository';
 import CredentialError from './errors/CredentialError';
