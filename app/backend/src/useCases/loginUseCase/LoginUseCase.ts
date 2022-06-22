@@ -15,7 +15,7 @@ export class LoginUseCase {
       throw new CredentialError('Incorrect email or password', StatusCodes.UNAUTHORIZED);
     }
 
-    const isInvalidPassword = !bcryptjs.compare(password, user.password);
+    const isInvalidPassword = !bcryptjs.compareSync(password, user.password);
 
     if (isInvalidPassword) {
       throw new CredentialError('Incorrect email or password', StatusCodes.UNAUTHORIZED);
