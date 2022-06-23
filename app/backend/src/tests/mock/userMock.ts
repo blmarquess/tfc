@@ -1,18 +1,3 @@
-// export const correctUserRequest = {
-//   "email": "admin@admin.com",
-//   "password": "as654dfdq"
-// };
-
-// export const correctUserResponse = {
-//   "user": {
-//     "id": 1,
-//     "username": "Admin",
-//     "role": "admin",
-//     "email": "admin@admin.com"
-//   },
-//   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTY1NTU4MTU3OSwiZXhwIjoxNjU2MTg2Mzc5fQ.Ia3QERgy3b0_O_TnXDrjT_klvIcrXV4EGoIu-ONvk7Q"
-// }
-
 export const correctUserRequest = {
   "email": "admin@admin.com",
   "password": "secret_admin"
