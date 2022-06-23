@@ -7,7 +7,7 @@ class Match extends Model<MatchEntity> {}
 
 Match.init({
   id: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
   },
