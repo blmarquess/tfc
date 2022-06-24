@@ -1,5 +1,6 @@
+import { MatchEntity } from '../../entities/MatchEntity';
 import Match from '../../database/models/Match';
 
 export interface ICreateMatchesRepository {
-  execute(match: Match): Promise<Match>;
+  execute(newMatch: MatchEntity): Promise<Match>;
 }

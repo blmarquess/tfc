@@ -1,11 +1,12 @@
 import { MatchEntity } from '../../../entities/MatchEntity';
 import Match from '../../../database/models/Match';
+import { ICreateMatchesRepository } from '../ICreateMatchesRepository';
 
-export default class CreateMatchesRepository {
-  constructor(private repository = Match) { }
+export default class CreateMatchesRepository implements ICreateMatchesRepository {
+  private repository = Match;
 
-  async execute(match: MatchEntity) {
-    const createdMatch = await this.repository.create(match);
+  async execute(newMatch: MatchEntity) {
+    const createdMatch = await this.repository.create(newMatch);
     return createdMatch;
   }
 }
