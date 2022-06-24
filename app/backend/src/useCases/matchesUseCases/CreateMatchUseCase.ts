@@ -1,7 +1,8 @@
-import HttpRequestError from '../../presentation/errors/HttpRequestError';
 import { MatchEntity } from '../../entities/MatchEntity';
 import CreateMatchesRepository from '../repositories/implementations/CreateMatchesRepository';
 import { ICreateMatchesRepository } from '../repositories/ICreateMatchesRepository';
+import StatusCodes from '../../utils/statusCodes';
+import HttpRequestError from '../../presentation/errors/HttpRequestError';
 
 export default class CreateMatchUseCase {
   private repository: ICreateMatchesRepository;
@@ -10,15 +11,16 @@ export default class CreateMatchUseCase {
     this.match = match;
   }
 
-  private verifyMatch(): boolean {
-    return this.match.homeTeam !== this.match.awayTeam;
+  async verifyMatch(): Promise<void> {
+    const hasTeamInvalid = await this.repository
+      .verifyIfExistTeams(this.match.awayTeam, this.match.homeTeam);
+    if (hasTeamInvalid) {
+      throw new HttpRequestError('There is no team with such id!', StatusCodes.BAD_REQUEST);
+    }
   }
 
   async execute() {
-    const isMatchInvalid = !this.verifyMatch();
-    if (isMatchInvalid) {
-      throw new HttpRequestError('Teams must be different');
-    }
+    await this.verifyMatch();
     const createMatch = await this.repository.execute({ ...this.match, inProgress: true });
     return createMatch;
   }
