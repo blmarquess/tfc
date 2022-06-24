@@ -25,7 +25,7 @@ describe('Teams Success cases all teams', () => {
   it('Esperasse que ao efetuar um request par a rota /teams retorne todos os times cadastrados', async () => {
     chaiHttpResponse = await chai.request(app).get('/teams/');
     expect(chaiHttpResponse.status).to.equal(200);
-    expect(chaiHttpResponse.body).to.deep.equals(resultTeams);
+    expect(chaiHttpResponse.body).to.be.deep.equals(resultTeams);
   });
 });
 
