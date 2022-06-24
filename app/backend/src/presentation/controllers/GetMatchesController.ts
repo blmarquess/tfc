@@ -5,7 +5,7 @@ import GetAllMatchesFromRepository
   from '../../useCases/matchesUseCases/getAllMatchesFromRepository';
 import StatusCodes from '../../utils/statusCodes';
 
-export default class MatchesController {
+export default class GetMatchesController {
   private serviceMatch;
   private serviceMatchesFiltered;
   constructor(private HttpRequest: Request, private response: Response) {
