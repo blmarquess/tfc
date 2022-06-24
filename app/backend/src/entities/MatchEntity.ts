@@ -1,5 +1,5 @@
 export interface MatchEntity {
-  id: number;
+  id?: number;
   homeTeam: number;
   homeTeamGoals: number;
   awayTeam: number;
