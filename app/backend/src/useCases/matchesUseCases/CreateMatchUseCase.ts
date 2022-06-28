@@ -15,7 +15,7 @@ export default class CreateMatchUseCase {
     const hasTeamInvalid = await this.repository
       .verifyIfExistTeams(this.match.awayTeam, this.match.homeTeam);
     if (hasTeamInvalid) {
-      throw new HttpRequestError('There is no team with such id!', StatusCodes.BAD_REQUEST);
+      throw new HttpRequestError('There is no team with such id!', StatusCodes.NOT_FOUND);
     }
   }
 
