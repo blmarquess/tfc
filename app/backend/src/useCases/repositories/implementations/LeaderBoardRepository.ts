@@ -44,7 +44,7 @@ export default class LeaderBoardRepository {
   async getLeaderBoardAway() {
     const AllTeamsNames = await this.getAllTeams();
 
-    const teamsAway = new Array(...new Set(AllTeamsNames.map((a) => a.teamHome.teamName)));
+    const teamsAway = new Array(...new Set(AllTeamsNames.map((a) => a.teamAway.teamName)));
     const factoryAway = teamsAway.map((team) => leaderBoardAwayFactory(team, AllTeamsNames));
 
     return SortArray(factoryAway);
