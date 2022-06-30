@@ -1,4 +1,4 @@
-FROM node:16-alpine AS backend_tfc_image
+FROM node:16-alpine
 
 WORKDIR /app
 
