@@ -1,8 +1,8 @@
 import Match from '../../../database/models/Match';
 import Team from '../../../database/models/Teams';
 import SortArray from '../../../utils/sortFunction';
-import { leaderBoardHomeFactory } from '../../../utils/BuilderLeaderBoardHome';
-import { leaderBoardAwayFactory } from '../../../utils/BuilderLeaderBoardsAway';
+import { leaderBoardHomeFactory } from '../../../utils/LeaderBoardHomeBuilder';
+import { leaderBoardAwayFactory } from '../../../utils/LeaderBoardsAwayBuilder';
 
 type responseQuery = {
   'homeTeamGoals': number,
