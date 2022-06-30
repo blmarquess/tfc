@@ -50,7 +50,9 @@ describe('Teams Failure cases all Create new Matches', () => {
   });
   it('Esperasse que ao efetuar um request POST para a rota /matches retorne um erro caso não tenha todos os campos', async () => {
     chaiHttpResponse = await chai.request(app).post('/matches')
-      .send({homeTeam: 122, awayTeam: 1 });
+      .send({ homeTeam: 122, awayTeam: 1 });
+    chaiHttpResponse = await chai.request(app).post('/matches/5')
+    chaiHttpResponse = await chai.request(app).post('/matches/5/finish')
       // expect(chaiHttpResponse.status).to.be.equal(failureResulteCreate.ErroINfo.statusCode);
       // expect(chaiHttpResponse.body.message).to.be.deep.equals(failureResulteCreate.ErroINfo.message);
   });

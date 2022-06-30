@@ -39,6 +39,8 @@ describe('Login Success cases', () => {
     expect(chaiHttpResponse.body.user).to.have.property('email');
     expect(chaiHttpResponse.body.user).to.not.have.property('password');
     expect(chaiHttpResponse.body).to.have.property('token');
+    const token = chaiHttpResponse.body.token;
+    chaiHttpResponse = await chai.request(app).get('/validate').set(token);
   });
 });
 describe('Login Failure cases', () => {
