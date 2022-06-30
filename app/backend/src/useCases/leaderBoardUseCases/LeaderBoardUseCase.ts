@@ -1,3 +1,4 @@
+import mergeTeamResults, { teamRes } from '../../utils/JoinMatchesToLeaderBoard';
 import LeaderBoardRepository from '../repositories/implementations/LeaderBoardRepository';
 
 export default class LeaderBoardUseCase {
@@ -11,5 +12,15 @@ export default class LeaderBoardUseCase {
   public async getLeaderBoardAway() {
     const AwayLeaderBoard = await this.repository.getLeaderBoardAway();
     return AwayLeaderBoard;
+  }
+
+  public async getAllBoardMatch() {
+    const matchesInHome = await this.repository.getLeaderBoardHome() as unknown as teamRes[];
+    const matchesInAway = await this.repository.getLeaderBoardAway() as unknown as teamRes[];
+    const joinMatchesResults = matchesInHome.map((homeMatch) => {
+      const awayMatch = matchesInAway.find(({ name }) => name === homeMatch.name) as teamRes;
+      return { ...mergeTeamResults(homeMatch, awayMatch) };
+    });
+    return joinMatchesResults;
   }
 }
