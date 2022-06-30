@@ -14,4 +14,9 @@ export default class LeaderBoardController {
     const LeaderBoardAway = await this.useCase.getLeaderBoardAway();
     return res.status(StatusCodes.OK).json(LeaderBoardAway);
   }
+
+  public async GetAllLeaderBoard(_req: Request, res: Response) {
+    const LeaderBoardAway = await this.useCase.getAllBoardMatch();
+    return res.status(StatusCodes.OK).json(LeaderBoardAway);
+  }
 }
